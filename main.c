@@ -1,23 +1,32 @@
 #include <stdio.h>
 
 int main() {
-    int num1, num2, temp;
+    float num1, num2, num3, num4, num5;
+    float sum;
+    float average;
 
-    printf("Enter two integers: \n");
+    printf("Enter the first number: ");
+    scanf("%f", &num1);
 
-    scanf("%d %d", &num1, &num2);
+    printf("Enter the second number: ");
+    scanf("%f", &num2);
 
-    printf("Before Swapping:\n");
-    printf("First number = %d\n", num1);
-    printf("Second number = %d\n", num2);
+    printf("Enter the third number: ");
+    scanf("%f", &num3);
 
-    temp = num1;
-    num1 = num2;
-    num2 = temp;
+    printf("Enter the fourth number: ");
+    scanf("%f", &num4);
 
-    printf("\nAfter Swapping:\n");
-    printf("First number = %d\n", num1);
-    printf("Second number = %d\n", num2);
+    printf("Enter the fifth number: ");
+    scanf("%f", &num5);
+
+    sum = num1 + num2 + num3 + num4 + num5;
+
+    average = sum / 5.0;
+
+    printf("\nThe sum of the five numbers is: %.2f\n", sum);
+    printf("The average of the five numbers is: %.2f\n", average);
 
     return 0;
+
 }
