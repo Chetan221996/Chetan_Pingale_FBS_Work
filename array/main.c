@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int n, i, key, found = 0;
+    int n, i;
 
     printf("Enter number of elements: ");
     scanf("%d", &n);
@@ -13,20 +13,20 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    printf("Enter the number to search: ");
-    scanf("%d", &key);
+    int min = arr[0];
+    int max = arr[0];
 
-    for(i = 0; i < n; i++) {
-        if(arr[i] == key) {
-            printf("Number %d found at position %d.\n", key, i + 1);
-            found = 1;
-            break;
+    for(i = 1; i < n; i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+        }
+        if(arr[i] > max) {
+            max = arr[i];
         }
     }
 
-    if(!found) {
-        printf("Number %d not found in the array.\n", key);
-    }
+    printf("Minimum number = %d\n", min);
+    printf("Maximum number = %d\n", max);
 
     return 0;
 }
